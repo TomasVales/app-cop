@@ -1,0 +1,29 @@
+@import "tailwindcss";
+html, body { -webkit-tap-highlight-color: transparent; }
+
+/* Campo matemático visual (MathLive) */
+math-field.math-input {
+  display: block;
+  width: 100%;
+  font-size: 1.9rem;
+  background: transparent;
+  color: #000;
+  border: none;
+  outline: none;
+  --caret-color: #000;
+  --selection-background-color: #fde68a;
+  --placeholder-color: #9ca3af;
+}
+math-field.math-input::part(menu-toggle),
+math-field.math-input::part(virtual-keyboard-toggle) {
+  display: none;
+}
+
+/* Hoja cuadriculada para las tarjetas de resultado */
+.sheet {
+  background-image:
+    linear-gradient(to right, rgb(226 232 240 / 0.55) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(226 232 240 / 0.55) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+.sheet .katex { font-size: 1.12em; }
